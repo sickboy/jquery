@@ -9174,7 +9174,9 @@ if ( typeof define === "function" && define.amd ) {
 }
 
 // use the global jquery, nasty workaround.
-jQuery = window.jQuery;
+if (window.jQuery) {
+	jQuery = window.jQuery;
+}
 
 var
 	// Map over jQuery in case of overwrite
